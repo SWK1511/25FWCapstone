@@ -29,7 +29,7 @@ class PlutoInterface:
         self.sdr.tx_rf_bandwidth = int(rf_bw)
         self.sdr.tx_hardwaregain_chan0 = int(tx_gain)
 
-    def configure_rx(self, fc: float, rf_bw: float, rx_buffer_size: int, gain_mode: str = "slow_attack"):
+    def configure_rx(self, fc: float, rf_bw: float, rx_buffer_size: int, gain_mode: str = "manual"):
         """Pluto RX: carrier, bandwidth, buffer size, gain mode"""
         self.sdr.rx_lo = int(fc)
         self.sdr.rx_rf_bandwidth = int(rf_bw)
@@ -39,10 +39,10 @@ class PlutoInterface:
     def tx(self, samples: np.ndarray):
         """Transmit complex baseband samples."""
 
-        print(
+        '''print(
             f"[DEBUG][TX] mean={np.mean(np.abs(samples)):.4f}, "
             f"max={np.max(np.abs(samples)):.4f}, shape={samples.shape}"
-        )
+        )'''
 
         self.sdr.tx(samples)
 

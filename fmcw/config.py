@@ -17,17 +17,19 @@ class FMCWConfig:
     sample_rate: float = 2e6
 
     # FMCW sweep bandwidth
-    B: float = 2.39e6
+    B: float = 20e6
 
     # Chirp duration (0.5 ms)
     T: float = 5e-4
 
     # 프레임 당 chirp 수 (Doppler/존재탐지용)
-    num_chirps: int = 128
+    num_chirps: int = 512
 
     # TX 출력 (dB)
-    tx_gain: int = -45
+    tx_gain: int = 0
 
+    # RX  (dB)
+    rx_gain = 50
     # DC/누설 제거용 guard bins
     guard_bins: int = 0
 

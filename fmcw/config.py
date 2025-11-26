@@ -17,7 +17,7 @@ class FMCWConfig:
     sample_rate: float = 2e6
 
     # FMCW sweep bandwidth
-    B: float = 20e6
+    B: float = 50e6
 
     # Chirp duration (0.5 ms)
     T: float = 5e-4

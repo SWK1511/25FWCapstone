@@ -107,7 +107,6 @@ def main():
 
             dt = time.time() - t0
 
-            # ★ 3프레임마다 결과 출력
             if True:
                 if final_detect:
                     print(

@@ -21,7 +21,7 @@ def main():
     cfg = FMCWConfig()
     
     # [핵심 수정 1] 대역폭을 50MHz -> 10MHz로 줄여야 멀리(7.5m) 보입니다.
-    cfg.B = 25e6          # 10 MHz (최대 거리 7.5m)
+    cfg.B = 20e6          # 10 MHz (최대 거리 7.5m)
     
     # [설정 유지] 
     cfg.num_chirps = 128  # 걷는 속도 감지용

@@ -14,13 +14,13 @@ class FMCWConfig:
     fc: float = 2.4e9
 
     # 샘플레이트 (2 MHz - USB 전송 안정성 최적)
-    sample_rate: float = 2e6
+    sample_rate: float = 40e6
 
     # [중요] FMCW sweep bandwidth (대역폭)
     # 샘플레이트(2MHz)보다 크면 신호가 깨집니다(Aliasing).
     # 1 MHz로 설정하여 안정적인 신호를 생성합니다.
     # (참고: 대역폭이 좁아 거리 해상도는 낮지만, 도플러(속도) 분석에는 문제없습니다.)
-    B: float = 50e6
+    B: float = 20e6
 
     # Chirp duration (0.5 ms)
     T: float = 5e-4
